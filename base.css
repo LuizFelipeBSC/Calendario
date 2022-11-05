@@ -11,7 +11,7 @@ body {
     margin: 0 auto;
     background-color: #8c5afb;
 }
-.menu {
+#menu {
     width: 100%;
     background-image: linear-gradient(to right,#2d14ee,#6b42f8);
     padding: 110px 0px 0px;
