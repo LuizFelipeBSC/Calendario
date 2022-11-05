@@ -1,0 +1,41 @@
+html,
+body {
+    background-color: #FFFFFF;
+    display: flex;
+    margin: 0px;
+    height: 100%;
+}
+.wrapper {
+    width: 1200PX;
+    display: flex;
+    margin: 0 auto;
+    background-color: #8c5afb;
+}
+.menu {
+    width: 100%;
+    background-image: linear-gradient(to right,#2d14ee,#6b42f8);
+    padding: 110px 0px 0px;
+    height: 100%;
+}
+
+.content {
+    background-image:linear-gradient( to right,#8c5afb,#fff,#fff,#fff);
+    margin-left: 200px;
+    height: 100%;
+}
+#Calendar {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    table-layout: fixed;
+    margin-left: 78px;
+    margin-right: 0px;
+    height: 550px;
+}
+.buttonmenu {
+    width: 200px;
+    height: 50px;
+    border: 0;
+    background-color:transparent;
+    margin-bottom: 30px;
+    
+}
