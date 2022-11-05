@@ -29,6 +29,10 @@ function daysOfmonth(month, ano) {
     return days();
 }
 
+function calendario() {
+    
+}
+
 function postMessage() {
     
 }
