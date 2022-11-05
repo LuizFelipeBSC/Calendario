@@ -30,13 +30,14 @@ function daysOfmonth(month, ano) {
 }
 
 function calendario() {
-    document.write('</tr>');
+    document.write('<tr>');
     document.write('<th> Domingo</th>');
     document.write('<th> Segunda-Feira</th>');
     document.write('<th> Terça-Feira</th>');
     document.write('<th> Quarta-Feira</th>');
     document.write('<th> Quinta-Feira</th>');
     document.write('<th> Sábado</th>');
+    document.write('</tr>');
 }
 
 function postMessage() {
