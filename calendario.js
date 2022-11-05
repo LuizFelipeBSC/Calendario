@@ -29,6 +29,10 @@ function daysOfmonth(month, ano) {
     return days();
 }
 
+function postMessage() {
+    
+}
+
 // Exemplo:
     console.log(daysOfmonth()); // Exibe 28. 
 
