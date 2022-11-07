@@ -1,15 +1,11 @@
-html,
-body {
-    background-image:linear-gradient( to right,#238be0,#238be0,#fff,#fff);
+html {
     display: flex;
-    margin: 0px;
     height: 100%;
+    width: 100%;
+
 }
-#menu {
-    width: 100%;  
-    padding: 110px 0px 0px;
-    height: 100%;
-}
-#menuintens {
-    padding: 25px;
+
+body {
+    display: flex;
+    background-image:linear-gradient( to right,#238be0,#238be0,#fff,#fff);
 }
