@@ -1,49 +1,48 @@
-const meses = [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-const dias = [ 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-feira', 'Sabado', 'Domingo'];
+function montarCalendario(retorno){
+    const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    //const semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
 
+    let d = new Date();
+    let mes = d.getMonth();
 
-//if ((ano % 4 == 0) && ((ano % 100 != 0) || (ano % 400 == 0))
+    let diasMesses = new Array();
+    let arrayRetorno = new Array();
 
-function daysOfmonth(month, ano) {
-    const d = new Date();
-
-    var data = new Date(ano, month, 0);
-    var mes = d.getMonth() + 1;
-    var days;
-
-    if (ano == null && month == null) {
-        days = new Date(d.getFullYear() ,mes, 0).getDate();
+    for (let i = 0; i < 12; i++) {
+        //
+        diasMesses[i] = new Date(d.getFullYear() ,mes, 0).getDate();
         
-        return montarAgenda(days);
-
-    } else if (month != null) {
-        days = new Date(d.getFullYear() ,month, 0).getDate();
-
-        return montarAgenda(days);
+        arrayRetorno[i]= Array();
+        
+        for (let n = 1; n <= diasMesses[i]; n++) {
+            //
+            var diaMes = new Date(d.getFullYear() ,i,n).getDay();
+            //
+            let semanaMes = semana[diaMes];
+            arrayRetorno[i][n] = semanaMes;
+        }
     }
 
-    //for (index = 1; index <=12 ; index++) {
-            
-    //    days[index] = new Date(d.getFullYear() ,index, 0).getDate();
-    //}
-   
-    return days();
-}
+    let y = 0;
+    let txtSemana = "";
+    let txtDia = "";
 
-function montarAgenda(days) {
-    var array1 = [];
-
-    for (i = 1; i <= days; i++) {
-
-        array1[i] = i;
-        
+    function mySemana(element) {
+        txtSemana += "<td>"+element+"</td>";
     }
 
-    var listItems = array1.map(function(city){
-      return '<td>' + city + '</td>';
-    })
+    function myDias(element) {
+        txtDia += "<td>"+element+"</td>";
+    }
 
-    document.getElementById('agenda').innerHTML = listItems.join('');
-    document.getElementById('agenda').innerHTML = listItems.join('');
-    
+    semana.forEach(mySemana);
+    //semana.forEach(myDia);
+
+    meses.forEach( function myMes(value, i, array1) {
+        document.querySelector('#calendario tbody').innerHTML += "<tr><th colspan='7'>"+value+"<th></tr><tr>"+txtSemana+
+        "</tr>" 
+      });
+
+    document.getElementById('mes').innerHTML = meses[mes];
 }

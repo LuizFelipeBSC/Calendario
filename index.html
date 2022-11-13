@@ -14,11 +14,11 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body onload="daysOfmonth()">
+<body onload="montarCalendario()">
     <!--Menu-->
-    <div id="menu" class="text-center d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <div id="menu" class="text-center d-flex flex-column flex-shrink-0 p-3 bg-light">
       
-      <a href="/" class="link-dark text-decoration-none">
+      <a href="/" class="link-dark text-decoration-none ">
         <span class="fs-4">
             <font>Calendário AWS</font>
         </span>
@@ -26,7 +26,7 @@
       
       <hr>
 
-      <ul id="menuintens" class="nav nav-pills flex-column mb-auto">
+      <ul id="menuintens" class="nav nav-pills flex-column mb-auto " style="width: 280px;">
         
         <li>
           <a href="#" class="nav-link active" aria-current="page">
@@ -51,27 +51,44 @@
 
     </div>
 
-    <!-- Conteúdo -->
-      <nav id="navegacao">
-        <a href="">back</a>
-        <h2></h2>
-        <a href="">next</a>
+    <!-- Conteúdo -->      
+    <div class="container">
+
+      <!-- Navegação -->      
+      <nav>
+        <ul class="nav justify-content-center align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="javascript:daysOfmonth(-1)">
+              <img src="next - Copia.png" alt="">
+            </a>
+          </li>
+    
+          <li class="nav-item">
+              <h4 id="mes" class="nav-item"></h4>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:daysOfmonth(+1)">
+              <img src="next.png" alt="">
+            </a>
+          </li>
+        </ul>
       </nav>
 
-      <table id="Calendar" data-month="auto" border="0" cellpadding="0" cellspacing="0">
-        <tr id="dias-semana">
-            <td colspan=2>Dom</td>
-            <td colspan=2>Seg</td>
-            <td colspan=2>Ter</td>
-            <td colspan=2>Qua</td>
-            <td colspan=2>Qui</td>
-            <td colspan=2>Sex</td>
-            <td colspan=2>Sáb</td>
-        </tr>
-        <tr  id="agenda" colspan=2>
-        </tr>
+      <table id="calendario" class="table">
+        <thead>
+        </thead>
+
+        <tbody>
+        </tbody>
       </table>
+      
+      <div class="container text-center">
+        <div id="" class="row row-cols-4"></div>
+      </div>
+  
     </div>
+
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
