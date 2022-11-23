@@ -1,48 +1,98 @@
-function montarCalendario(retorno){
-    const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-    const semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-    //const semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+var d = new Date();
+var T = d.getMonth();
+var A = d.getFullYear();
 
-    let d = new Date();
-    let mes = d.getMonth();
+function montarCalendario(mes,ano){
+    const meses = ['','Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    
+    let month = d.getMonth() + 1;
 
-    let diasMesses = new Array();
-    let arrayRetorno = new Array();
+    var y=0;
+    var z = 0
+    var txt = "";
 
-    for (let i = 0; i < 12; i++) {
-        //
-        diasMesses[i] = new Date(d.getFullYear() ,mes, 0).getDate();
+    //se mes diferente de vazio
+    if (mes == null) {
+
+        document.getElementById('mes').innerHTML = meses[month];
+
+        //Primeiro Dia da semana de Janeiro 6
+        var firstDayWeek = new Date(d.getFullYear() ,d.getMonth(), 1).getDay()-1;
+        //document.getElementById('mes').innerHTML = mes;
+
+        //total de dias dos Meses
+        var lastDayMonth = new Date(d.getFullYear() ,month, 0).getDate();
+        //document.getElementById('mes').innerHTML = lastDayMonth;
         
-        arrayRetorno[i]= Array();
+        //total de dias do Mes Passado
+        var lastMonth = new Date(d.getFullYear() ,(month-1), 0).getDate();
+        //document.getElementById('mes').innerHTML = lastMonth;
+
+
+    }else{
+        document.getElementById('mes').innerHTML = meses[mes+1];
         
-        for (let n = 1; n <= diasMesses[i]; n++) {
-            //
-            var diaMes = new Date(d.getFullYear() ,i,n).getDay();
-            //
-            let semanaMes = semana[diaMes];
-            arrayRetorno[i][n] = semanaMes;
+        //Primeiro Dia da semana de Janeiro 6
+        firstDayWeek = new Date(ano ,mes, 1).getDay()-1;
+        //document.getElementById('mes').innerHTML = firstDayWeek;
+
+        //total de dias dos Meses
+        lastDayMonth = new Date(ano ,mes+1, 0).getDate();
+        //document.getElementById('mes').innerHTML = lastDayMonth;
+        
+        //total de dias do Mes Passado
+        var lastMonth = new Date(ano ,mes, 0).getDate();
+        //document.getElementById('mes').innerHTML = lastMonth;
+
+
+    }
+
+    for (var n = -firstDayWeek, i = (lastMonth-firstDayWeek); n < (42-firstDayWeek); i++, n++) {
+        y++        
+        
+        //Se n for maior que o ultimo dia do mes
+        if (n > lastDayMonth) { 	
+            z+=1;
+            txt += "<td>"+z+"</td>";
+        }else
+
+        //Se n for menor ou igual o ultimo dia do mes
+        if (i <= lastMonth) { 	
+            txt += "<td>"+i+"</td>";
+        }else
+        
+        txt += "<td>"+n+"</td>";
+
+        if(y == 7 ){
+            y=0;
+            txt += "<tr>";
+        }   
+
+    }
+    
+    document.querySelector('#calendario tbody').innerHTML = txt;
+    
+    const botao_proximo = document.getElementById('btn-next');
+    const botao_anterior = document.getElementById('btn-prev');
+    
+    botao_proximo.onclick = function(){
+        T++;
+        if (T > 11) {
+            T = 0;
+            A ++;
         }
+        montarCalendario(T,A)
     }
 
-    let y = 0;
-    let txtSemana = "";
-    let txtDia = "";
-
-    function mySemana(element) {
-        txtSemana += "<td>"+element+"</td>";
+    botao_anterior.onclick = function(){
+        T--;
+        if (T < 0) {
+            T = 11;
+            A --;
+        }
+        montarCalendario(T,A)
     }
 
-    function myDias(element) {
-        txtDia += "<td>"+element+"</td>";
-    }
 
-    semana.forEach(mySemana);
-    //semana.forEach(myDia);
-
-    meses.forEach( function myMes(value, i, array1) {
-        document.querySelector('#calendario tbody').innerHTML += "<tr><th colspan='7'>"+value+"<th></tr><tr>"+txtSemana+
-        "</tr>" 
-      });
-
-    document.getElementById('mes').innerHTML = meses[mes];
 }

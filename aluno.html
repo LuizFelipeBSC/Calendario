@@ -8,13 +8,14 @@
   <title>Blackboard AWS</title>
 
   <link rel="stylesheet" href="base.css">
+  <script src="./calendario.js"></script>
 
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="montarCalendario()">
   <!--Menu-->
   <nav id="menu" class="navbar">
     <div class="container-fluid">
@@ -50,17 +51,47 @@
       </div>
     </div>
   </nav>
-  
   <!-- Conteúdo -->
-  <div id="card-boas-vindas">
-    <h1>Bem vindos ao Blackboard AWS</h1>
-    <h6>Escolha uma das opções de acesso:</h6>
-    <div id="button-professor-inicio">
-      <a href="./professor.html" class="professor">Professor</a>
-    </div>
-    <div id="button-aluno-inicio">
-      <a href="./aluno.html" class="aluno">Aluno</a>
-    </div>
+  <div class="container">
+
+    <!-- Navegação -->
+    <nav id="nav-datas">
+      <ul class="nav justify-content-center align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" id="btn-prev">
+            <img src="next - Copia.png" alt="">
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <h4 id="mes" class="nav-item"></h4>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="btn-next">
+            <img src="next.png" alt="">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <table id="calendario" class="table text-center">
+      <thead>
+        <tr>
+          <th>Domingo</th>
+          <th>Segunda</th>
+          <th>Terça</th>
+          <th>Quarta</th>
+          <th>Quinta</th>
+          <th>Sexta</th>
+          <th>Sabado</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      </tbody>
+    </table>
+
   </div>
 
 
@@ -68,7 +99,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
-  <script src="./calendario.js"></script>
 </body>
 
 </html>
