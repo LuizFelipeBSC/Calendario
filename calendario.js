@@ -120,7 +120,8 @@ function montarCalendario(mes,ano){
     }
 
     Form.addEventListener('submit', function(e) {
-        document.getElementById("Seila").innerHTML = "<li> <input type='checkbox'>" + "     |     " + Name.value + "     |     "+ formataData() + "     |     "+ formataData2() +" </input> </li>";
+        document.getElementById("Seila").innerHTML += "<li> " + "     |     " +"Tarefa: "+ Name.value + "     |     "+ "Data inicial: " + formataData() + "     |     "+ "Data final: " + formataData2() +"  </li>";
         e.preventDefault();
     });
 }
+

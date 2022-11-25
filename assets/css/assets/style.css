@@ -12,7 +12,7 @@ body {
 }
 .container {
     width: 1500px;
-    height: 500px;
+    height: 600px;
     margin-top: 30px;
     background: rgba( 35, 81, 209, 0.50 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -104,15 +104,15 @@ img {
     border: none;
 }
 button.btn.btn-primary {
-    color: rgba(0, 0, 0, 0.33);
+    color: rgba(193, 193, 193, 0.8);
     background: transparent;
     border: none;
 }
 #ano {
     color: #fff;
-    margin-left: 50px;
+    text-align: center;
     margin-top: 20px;
-    margin-bottom: -40px;
+    margin-bottom: -10px;
 }
 #calendario {
     color: #ffffff;
