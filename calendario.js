@@ -8,7 +8,7 @@ function montarCalendario(mes,ano){
 
     let month = d.getMonth() + 1;
     var data = 20/02/2022
-    var y=0;
+    var y = 0;
     var z = 0
     var txt = "";
     document.getElementById('ano').innerHTML = A;
@@ -77,12 +77,11 @@ function montarCalendario(mes,ano){
 
     }
 
-
-
     document.querySelector('#calendario tbody').innerHTML = txt;
 
     const botao_proximo = document.getElementById('btn-next');
     const botao_anterior = document.getElementById('btn-prev');
+    const Form = document.getElementById("FormularioTarefa");
 
     botao_proximo.onclick = function(){
         T++;
@@ -100,4 +99,28 @@ function montarCalendario(mes,ano){
         }
         montarCalendario(T,A)
     }
+
+    var Name = document.getElementById("recipient-name");
+    var Inicio = document.getElementById("recipient-Data-Inicio");
+    var Termino = document.getElementById("recipient-Data-Termino");
+
+    function formataData(){
+        let data = new Date(Inicio.value),
+            dia = data.getDate().toString().padStart(2, '0'),
+            mes = (data.getMonth()+1).toString().padStart(2, '0'),
+            ano = data.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+    }
+    function formataData2(){
+        let data = new Date(Termino.value),
+            dia = data.getDate().toString().padStart(2, '0'),
+            mes = (data.getMonth()+1).toString().padStart(2, '0'),
+            ano = data.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+    }
+
+    Form.addEventListener('submit', function(e) {
+        document.getElementById("Seila").innerHTML = "<li> <input type='checkbox'>" + "     |     " + Name.value + "     |     "+ formataData() + "     |     "+ formataData2() +" </input> </li>";
+        e.preventDefault();
+    });
 }

@@ -95,7 +95,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <ol id="Seila">
+
+          </ol>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Criar Tarefa</button>
@@ -113,24 +115,25 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form id="FormularioTarefa">
             <div class="mb-3">
               <label for="recipient-name" class="col-form-label">Tarefa:</label>
               <input type="text" class="form-control" id="recipient-name">
             </div>
             <div class="mb-3">
               <label for="message-text" class="col-form-label">Data de Inicio:</label>
-              <input type="date" class="form-control" id="recipient-name">
+              <input type="date" class="form-control" id="recipient-Data-Inicio" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </div>
             <div class="mb-3">
               <label for="message-text" class="col-form-label">Data de Termino:</label>
-              <input type="date" class="form-control" id="recipient-name">
+              <input type="date" class="form-control" id="recipient-Data-Termino" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </div>
-          </form>
-        </div>
+
         <div class="modal-footer">
-          <input type="submit" class="btn btn-primary" value="Criar Tarefa"></input>
+          <input type="submit" class="btn btn-primary" value="Criar Tarefa" id="ButtonSubmit"></input>
         </div>
+        </form>
+
       </div>
     </div>
   </div>
