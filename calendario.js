@@ -7,7 +7,7 @@ function montarCalendario(mes,ano){
     const semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
     let month = d.getMonth() + 1;
-
+    var data = 20/02/2022
     var y=0;
     var z = 0
     var txt = "";
@@ -54,22 +54,30 @@ function montarCalendario(mes,ano){
         //Se n for maior que o ultimo dia do mes
         if (n > lastDayMonth) {
             z+=1;
-            txt += "<td>"+z+"</td>";
+            txt += "<td> <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" data-bs-whatever=\"@getbootstrap\" >"+z+"</button> </td>";
         }else
 
             //Se n for menor ou igual o ultimo dia do mes
         if (i <= lastMonth) {
-            txt += "<td>"+i+"</td>";
+            txt += "<td> <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" data-bs-whatever=\"@getbootstrap\" >"+i+"</button> </td>";
         }else
 
-            txt += "<td>"+n+"</td>";
+            txt += "<td> <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" data-bs-whatever=\"@getbootstrap\" >"+n+"</button> </td>";
 
         if(y == 7 ){
             y=0;
             txt += "<tr>";
         }
 
+        if (data = y + "/" + i + "/" + n) {
+
+        } else {
+
+        }
+
     }
+
+
 
     document.querySelector('#calendario tbody').innerHTML = txt;
 
@@ -84,7 +92,6 @@ function montarCalendario(mes,ano){
         }
         montarCalendario(T,A)
     }
-
     botao_anterior.onclick = function(){
         T--;
         if (T < 0) {
@@ -93,6 +100,4 @@ function montarCalendario(mes,ano){
         }
         montarCalendario(T,A)
     }
-
-
 }

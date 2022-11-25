@@ -91,87 +91,59 @@
     </table>
 
   </div>
-  <section>
-    <div class="rt-container">
-      <div class="col-rt-12">
-        <div class="Scriptcontent">
-          <button class="Click-here">Click Aqui</button>
-          <div class="custom-model-main">
-            <div class="custom-model-inner">
-              <div class="custom-model-wrap">
-                <div class="modal-header p-5 pb-4 border-bottom-0">
-                  <h1 class="fw-bold mb-0 fs-2">Tarefa</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-5 pt-0">
-                  <form class="">
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Nome</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="date" class="form-control rounded-3" id="floatingPassword" placeholder="01/01/2000">
-                      <label for="floatingInput">Data de Inicio</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="date" class="form-control rounded-3" id="floatingPassword" placeholder="01/01/2000">
-                      <label for="floatingInput">Data de Termino</label>
-                    </div>
-                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Registra</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="bg-overlay"></div>
-          </div>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Tarefas
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Tarefas</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
 
-
-
-
-
-
-
-
-
-
-  <div class="modal modal-tour position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalTour">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-4 shadow">
-        <div class="modal-body p-5">
-          <h2 class="fw-bold mb-0">Tarefas</h2>
-
-          <ul class="d-grid gap-4 my-5 list-unstyled">
-            <li class="d-flex gap-4">
-              <svg class="bi text-muted flex-shrink-0" width="48" height="48"><use xlink:href="#grid-fill"/></svg>
-              <div>
-                <h5 class="mb-0">Grid view</h5>
-                Not into lists? Try the new grid view.
-              </div>
-            </li>
-            <li class="d-flex gap-4">
-              <svg class="bi text-warning flex-shrink-0" width="48" height="48"><use xlink:href="#bookmark-star"/></svg>
-              <div>
-                <h5 class="mb-0">Bookmarks</h5>
-                Save items you love for easy access later.
-              </div>
-            </li>
-            <li class="d-flex gap-4">
-              <svg class="bi text-primary flex-shrink-0" width="48" height="48"><use xlink:href="#film"/></svg>
-              <div>
-                <h5 class="mb-0">Video embeds</h5>
-                Share videos wherever you go.
-              </div>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">Great, thanks!</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Criar Tarefa</button>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nova Tarefa</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Tarefa:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Data de Inicio:</label>
+              <input type="date" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Data de Termino:</label>
+              <input type="date" class="form-control" id="recipient-name">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Criar Tarefa"></input>
+        </div>
+      </div>
+    </div>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
