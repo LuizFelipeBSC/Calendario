@@ -62,7 +62,7 @@ function montarCalendario(mes,ano){
             txt += "<td> <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" data-bs-whatever=\"@getbootstrap\" >"+i+"</button> </td>";
         }else
 
-            txt += "<td> <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" data-bs-whatever=\"@getbootstrap\" >"+n+"</button> </td>";
+            txt += "<td id='mes-atual'> <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" data-bs-whatever=\"@getbootstrap\" >"+n+"</button> </td>";
 
         if(y == 7 ){
             y=0;

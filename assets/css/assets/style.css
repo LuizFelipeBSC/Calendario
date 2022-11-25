@@ -3,11 +3,10 @@ html {
     height: 100%;
     width: 100%;
 }
-
 body {
     height: 100%;
     width: 100%;
-    background-image: url("../imagens/background.jpg");
+    background-image: url("../../imagens/background.jpg");
     background-attachment: scroll;
     background-repeat: no-repeat;
 }
@@ -27,13 +26,17 @@ img {
 }
 #nav-datas{
     color: #fff;
-    margin-top: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 #menu {
     background: rgba( 35, 81, 209, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 100%;
+}
+#menu img {
+    margin-left: 20px;
 }
 .navbar .navbar-brand {
     text-align: center;
@@ -49,6 +52,7 @@ img {
 .offcanvas-title {
     color: #fff;
     margin: auto;
+    text-transform: uppercase;
 }
 .offcanvas-body {
     color: #fff;
@@ -75,34 +79,32 @@ img {
     text-align: center;
 }
 #card-boas-vindas {
+    color: #fff;
     margin-top: 15%;
     text-align: center;
-    height: 100%;
 }
 #card-boas-vindas h6 {
     margin-top: 1%;
     margin-bottom: 5%;
 }
-#card-boas-vindas .professor {
-    border: thin solid #0c497a;
-    border-radius: 5px;
-    padding: 8px 33px;
-    text-decoration: none;
-}
 #card-boas-vindas .aluno {
+    color: #fff;!important;
+    background: rgba(28, 69, 182, 0.33); !important;
     border: thin solid #0c497a;
     border-radius: 5px;
     padding: 8px 45px;
     text-decoration: none;
 }
-#button-professor-inicio {
-    margin-left: -14%;
-}
 #button-aluno-inicio {
     margin-top: -1.8%;
-    margin-left: 15%;
+}
+#mes-atual button.btn.btn-primary {
+    color: #fff;
+    background: transparent;
+    border: none;
 }
 button.btn.btn-primary {
+    color: rgba(0, 0, 0, 0.33);
     background: transparent;
     border: none;
 }
@@ -114,5 +116,52 @@ button.btn.btn-primary {
 }
 #calendario {
     color: #ffffff;
-    text-shadow: 0.1em 0.1em 0.2em black: #1425be;
+    text-shadow: 0.1em 0.1em 0.2em #1425be;
+}
+#btn-next img {
+    width: 30px;
+    height: 30px;
+}
+#btn-prev img {
+    width: 30px;
+    height: 30px;
+}
+#btn-tarefas {
+    margin-top: 10px;
+    border: none;
+    color: white;!important;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+#btn-inicio {
+    color: #fff;!important;
+    font-size: 1rem;!important;
+    text-transform: uppercase;
+}
+button.navbar-toggler{
+    color: #0c497a;!important;
+    border-color: #0c497a;!important;
+    margin-right: 20px;
+}
+#exampleModal .modal-content {
+    color: #fff;
+    background: rgba( 35, 81, 209, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#staticBackdrop .modal-content{
+    color: #fff;
+    background: rgba( 35, 81, 209, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#staticBackdrop .modal-content button {
+    color: #fff;!important;
+    border: thin solid #0c497a;
 }

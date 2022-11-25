@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/assets/style.css">
   <title>Blackboard AWS</title>
 
 
@@ -19,7 +19,7 @@
   <!--Menu-->
   <nav id="menu" class="navbar">
     <div class="container-fluid">
-      <a href="./index.html"><img src="./assets/imagens/logo-amazon-web-services-1024.png"></a>
+      <a href="./index.html"><img src="./assets/imagens/logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -27,22 +27,18 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Calendario AWS</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button id="btn-close-menu" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+              <a id="btn-inicio"  class="nav-link" aria-current="page" href="./index.html">Inicio</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Usuários
-              </a>
-              <ul id="menu-transparente" class="dropdown-menu">
-                <li><a class="dropdown-item" href="./professor.html">Professor</a></li>
-                <li><a class="dropdown-item" href="./aluno.html">Aluno</a></li>
-              </ul>
+            <li class="nav-item">
+              <button id="btn-tarefas" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Tarefas
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -56,7 +52,7 @@
       <ul class="nav justify-content-center align-items-center">
         <li class="nav-item">
           <a class="nav-link" id="btn-prev">
-            <img src="assets/imagens/voltar.png" alt="">
+            <img src="assets/imagens/btn-left.png" alt="">
           </a>
         </li>
         <li class="nav-item">
@@ -65,7 +61,7 @@
 
         <li class="nav-item">
           <a class="nav-link" id="btn-next">
-            <img src="assets/imagens/next.png" alt="">
+            <img src="assets/imagens/btn-right.png" alt="">
           </a>
         </li>
       </ul>
@@ -89,10 +85,6 @@
     </table>
 
   </div>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Tarefas
-  </button>
 
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -106,8 +98,8 @@
           ...
         </div>
         <div class="modal-footer">
-
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Criar Tarefa</button>
+          <button class="btn btn-primary" type="submit">Excluir Tarefa</button>
         </div>
       </div>
     </div>
