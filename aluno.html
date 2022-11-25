@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Blackboard AWS</title>
 
-  <link rel="stylesheet" href="base.css">
+
   <script src="./calendario.js"></script>
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,7 +19,7 @@
   <!--Menu-->
   <nav id="menu" class="navbar">
     <div class="container-fluid">
-      <a href="./index.html"><img src="./imagens/logo-amazon-web-services-1024.png"></a>
+      <a href="./index.html"><img src="./assets/imagens/logo-amazon-web-services-1024.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -38,13 +39,10 @@
                 aria-expanded="false">
                 Usuários
               </a>
-              <ul id="menu-tranparente" class="dropdown-menu">
+              <ul id="menu-transparente" class="dropdown-menu">
                 <li><a class="dropdown-item" href="./professor.html">Professor</a></li>
                 <li><a class="dropdown-item" href="./aluno.html">Aluno</a></li>
               </ul>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Log</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -52,13 +50,13 @@
   </nav>
   <!-- Conteúdo -->
   <div class="container">
-    <h3 id="ano" align="center"></h3>
+    <h3 id="ano"></h3>
     <!-- Navegação -->
     <nav id="nav-datas">
       <ul class="nav justify-content-center align-items-center">
         <li class="nav-item">
           <a class="nav-link" id="btn-prev">
-            <img src="next - Copia.png" alt="">
+            <img src="assets/imagens/voltar.png" alt="">
           </a>
         </li>
         <li class="nav-item">
@@ -67,13 +65,13 @@
 
         <li class="nav-item">
           <a class="nav-link" id="btn-next">
-            <img src="next.png" alt="">
+            <img src="assets/imagens/next.png" alt="">
           </a>
         </li>
       </ul>
     </nav>
 
-    <table id="calendario" class="table text-center">
+    <table id="calendario" class="table table-borderless text-center">
       <thead>
         <tr>
           <th>Domingo</th>
@@ -91,7 +89,6 @@
     </table>
 
   </div>
-
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Tarefas
@@ -144,6 +141,8 @@
         </div>
       </div>
     </div>
+  </div>
+
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

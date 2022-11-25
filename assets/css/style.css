@@ -1,0 +1,118 @@
+html {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url("../imagens/background.jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+.container {
+    width: 1500px;
+    height: 500px;
+    margin-top: 30px;
+    background: rgba( 35, 81, 209, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+img {
+    height: 60px;
+}
+#nav-datas{
+    color: #fff;
+    margin-top: 0px;
+}
+#menu {
+    background: rgba( 35, 81, 209, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+}
+.navbar .navbar-brand {
+    text-align: center;
+}
+#offcanvasNavbar {
+    background: rgba( 35, 81, 209, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.offcanvas-title {
+    color: #fff;
+    margin: auto;
+}
+.offcanvas-body {
+    color: #fff;
+    text-align: center;
+}
+.offcanvas-body ul {
+    color: #fff;
+}
+#menu-transparente {
+    background: rgba( 35, 81, 209, 0.25 ); !important;
+}
+#menu-transparente .dropdown-item {
+    color: #ffffff; !important;
+    text-align: center;
+}
+#painel {
+    border: medium solid black;
+    margin-top: 7%;
+    width: 1500px;
+    height: 500px;
+}
+#painel h1 {
+    margin-top: 200px;
+    text-align: center;
+}
+#card-boas-vindas {
+    margin-top: 15%;
+    text-align: center;
+    height: 100%;
+}
+#card-boas-vindas h6 {
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+#card-boas-vindas .professor {
+    border: thin solid #0c497a;
+    border-radius: 5px;
+    padding: 8px 33px;
+    text-decoration: none;
+}
+#card-boas-vindas .aluno {
+    border: thin solid #0c497a;
+    border-radius: 5px;
+    padding: 8px 45px;
+    text-decoration: none;
+}
+#button-professor-inicio {
+    margin-left: -14%;
+}
+#button-aluno-inicio {
+    margin-top: -1.8%;
+    margin-left: 15%;
+}
+button.btn.btn-primary {
+    background: transparent;
+    border: none;
+}
+#ano {
+    color: #fff;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+}
+#calendario {
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em 0.2em black: #1425be;
+}
