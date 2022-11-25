@@ -5,13 +5,13 @@ var A = d.getFullYear();
 function montarCalendario(mes,ano){
     const meses = ['','Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
     const semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-    
+
     let month = d.getMonth() + 1;
 
     var y=0;
     var z = 0
     var txt = "";
-
+    document.getElementById('ano').innerHTML = A;
     //se mes diferente de vazio
     if (mes == null) {
 
@@ -24,7 +24,7 @@ function montarCalendario(mes,ano){
         //total de dias dos Meses
         var lastDayMonth = new Date(d.getFullYear() ,month, 0).getDate();
         //document.getElementById('mes').innerHTML = lastDayMonth;
-        
+
         //total de dias do Mes Passado
         var lastMonth = new Date(d.getFullYear() ,(month-1), 0).getDate();
         //document.getElementById('mes').innerHTML = lastMonth;
@@ -32,7 +32,7 @@ function montarCalendario(mes,ano){
 
     }else{
         document.getElementById('mes').innerHTML = meses[mes+1];
-        
+
         //Primeiro Dia da semana de Janeiro 6
         firstDayWeek = new Date(ano ,mes, 1).getDay()-1;
         //document.getElementById('mes').innerHTML = firstDayWeek;
@@ -40,7 +40,7 @@ function montarCalendario(mes,ano){
         //total de dias dos Meses
         lastDayMonth = new Date(ano ,mes+1, 0).getDate();
         //document.getElementById('mes').innerHTML = lastDayMonth;
-        
+
         //total de dias do Mes Passado
         var lastMonth = new Date(ano ,mes, 0).getDate();
         //document.getElementById('mes').innerHTML = lastMonth;
@@ -49,33 +49,33 @@ function montarCalendario(mes,ano){
     }
 
     for (var n = -firstDayWeek, i = (lastMonth-firstDayWeek); n < (42-firstDayWeek); i++, n++) {
-        y++        
-        
+        y++
+
         //Se n for maior que o ultimo dia do mes
-        if (n > lastDayMonth) { 	
+        if (n > lastDayMonth) {
             z+=1;
             txt += "<td>"+z+"</td>";
         }else
 
-        //Se n for menor ou igual o ultimo dia do mes
-        if (i <= lastMonth) { 	
+            //Se n for menor ou igual o ultimo dia do mes
+        if (i <= lastMonth) {
             txt += "<td>"+i+"</td>";
         }else
-        
-        txt += "<td>"+n+"</td>";
+
+            txt += "<td>"+n+"</td>";
 
         if(y == 7 ){
             y=0;
             txt += "<tr>";
-        }   
+        }
 
     }
-    
+
     document.querySelector('#calendario tbody').innerHTML = txt;
-    
+
     const botao_proximo = document.getElementById('btn-next');
     const botao_anterior = document.getElementById('btn-prev');
-    
+
     botao_proximo.onclick = function(){
         T++;
         if (T > 11) {
